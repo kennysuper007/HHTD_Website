@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="CabinGPT" />
+    <meta property="og:title" content="CabinGPT Demo" />
+    <meta
+      property="og:url"
+      content="https://johnatas-henrique.github.io/fake-racer/"
+    />
+    <meta property="og:description" content="CabinGPT" />
+    <meta property="og:image" content="https://i.imgur.com/XMPnLHm.png" />
+    <meta property="”og:type”" content="”game“" />
+    <link rel="icon" href="./favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>CabinGPT</title>
+  </head>
+
+  <body translate="no">
+    <div class="container">
+      <ul id="info">
+        <button
+          id="pauseBtn"
+          class="interfaceBtn pause hidden"
+          name="p"
+        ></button>
+        <button id="fullScreenBtn" class="interfaceBtn" name="fullscreenbtn">
+          <img class="img100" src="images/sprites/other/fullscreen.png" />
+        </button>
+        <span id="mute" class="mute hidden"></span>
+      </ul>
+
+      <div id="touchControls">
+        <div class="leftControls">
+          <button class="controlButtons" type="button" name="arrowup">U</button>
+          <button class="controlButtons" type="button" name="arrowdown">
+            D
+          </button>
+        </div>
+        <div class="rightControls">
+          <button class="controlButtons" type="button" name="enter">OK</button>
+          <button class="controlButtons" type="button" name="arrowleft">
+            L
+          </button>
+          <button class="controlButtons" type="button" name="arrowright">
+            R
+          </button>
+        </div>
+      </div>
+
+      <video id="space" width="100%" height="100%" class="hidden">
+        <source src="video/space.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <video id="streetview" width="100%" height="100%" class="hidden">
+        <source src="video/streetview.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <canvas id="gameCanvas" width="3840" height="2160"></canvas>
+    </div>
+
+    <audio id="menuMusic">
+      <source src="music/future-music.mp3" />
+    </audio>
+
+    <script src="./js/stats.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
